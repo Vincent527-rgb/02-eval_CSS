@@ -7,7 +7,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Links to code files -->
     <link rel="stylesheet" href="./styles/style.min.css">
@@ -17,56 +17,60 @@
     <script src="https://kit.fontawesome.com/3379e155de.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- ============= -->
+        <!-- HEADER -->
+    <!-- ============= -->
     <header class="header-home">
         <video src="./img/iStock-1240812517.mp4" muted loop></video>
-        <!-- Le wrapper me servira pour faire les marges et placer mes éléments au centre (voir base) -->
-        <div class="wrapper">
-            <!-- Menu disponible sur toutes les pages -->
-            <div class="menu">
-                <div class="logo"><img src="./img/hicks-thomas-logo-new-white.png" alt="hicks-thomas-logo-new-white"></div>
-                <nav class="menu-mobile">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </nav>
-                <nav class="menu-desktop">
-                    <a href="index.html">Home</a>
-                    <a href="attorneys.html">Attorneys</a>
-                    <a href="#">Practice Areas</a>
-                    <a href="#">News</a>
-                    <a href="#">Video Center</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
-                </nav>
-            </div>
-            <!-- hero cta -->
-            <div class="hero">
-                <h1>Hustle Never Sleeps.</h1>
-                <p>Houston's relentless pace demands a legal team that never quits. We are around-the-clock advocates, providing unwavering support when you need it most.</p>
-                <div class="container-btn">
-                    <a href="#"><span>Contact Hicks Thomas</span><span><i class="fa-solid fa-circle-play"></i></span></a>
-                    <a href="#">More <span><i class="fa-solid fa-arrow-down"></i></span></a>
-                </div>
+        <!-- Menu disponible sur toutes les pages -->
+        <div class="menu">
+            <div class="logo"><img src="./img/hicks-thomas-logo-new-white.png" alt="hicks-thomas-logo-new-white"></div>
+            <nav class="menu-mobile">
+                <div></div>
+                <div></div>
+                <div></div>
+            </nav>
+            <nav class="menu-desktop">
+                <a href="index.html">Home</a>
+                <a href="attorneys.html">Attorneys</a>
+                <a href="#">Practice Areas</a>
+                <a href="#">News</a>
+                <a href="#">Video Center</a>
+                <a href="contact.html">Contact</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+            </nav>
+        </div>
+        <!-- hero cta -->
+        <div class="hero">
+            <h1>Hustle Never Sleeps.</h1>
+            <p>Houston's relentless pace demands a legal team that never quits. We are around-the-clock advocates, providing unwavering support when you need it most.</p>
+            <div class="container-btn">
+                <a href="#"><span>Contact Hicks Thomas</span><span><i class="fa-solid fa-circle-play"></i></span></a>
+                <a href="#">More <span><i class="fa-solid fa-arrow-down"></i></span></a>
             </div>
         </div>
     </header>
-    <main>
+      
+    <!-- ============= -->
+        <!-- MAIN -->
+    <!-- ============= -->
+    <main class="main-home">
         <!-- ---- Part-1 : Texas ---- -->
-        <div class="texas">
-            <div class="wrapper">
+        <div class="texas"> <!-- Me permet de mettre un bg -->
+            <div class="wrapper wrap-texas"> <!-- wrapper => marge et centré (voir base) | wrap-texas => classe mise en forme -->
                 <section>
                     <h3>From the Board Room to the Courtroom <span><i class="fa-solid fa-arrow-right"></i></span></h3>
                     <h2>Texas Trial Lawyers</h2>
                     <p>Our litigation strategy is always crafted with your business objectives in mind. We invest the time to learn your business and understand your goals before developing our litigation game plan. This knowledge enables us to put you in the best position for success in the world of dispute resolution.</p>
                     <p>We know that the realm of <a href="#">business litigation</a> and disputes can be uncomfortable. That is why our first question is always “What can we do to help?” Our second question is always “What can we do better?” Knowing the answers to these questions helps solidify our relationships with our client partners.</p>
                 </section>
-                <blockquote>"Hicks Thomas LLP is an accomplished team of commercial litigators with a wealth of trial experience." <cite>Chambers USA</cite></blockquote>
+                <blockquote>"Hicks Thomas LLP is an accomplished team of commercial litigators with a wealth of trial experience." <br> <cite>Chambers USA</cite></blockquote>
             </div>
         </div>
 
         <!-- ---- Part-2 : Houston's top ---- -->
         <div class="houston">
-            <div class="wrapper">
+            <div class="wrapper wrap-houston">
                 <figure>
                     <img src="./img/AllisonFisher.jpg" alt="AllisonFisher" >
                     <figcaption>Allison Fisher</figcaption>
@@ -75,14 +79,14 @@
                     <h3>A Unique Perspective <span><i class="fa-solid fa-arrow-right"></i></span></h3>
                     <h2>Houston's Top Litigation Attorneys</h2>
                     <p>How do our clients describe us? They call us sophisticated legal strategists and creative problem solvers, bringing unique perspectives to every case. Our Houston attorneys' diverse experience and proven results offer peace of mind, even in high-stakes situations. We have the resources to handle complex cases while providing personalized attention to your company's needs.</p>
-                    <a href="#">More <span><i class="fa-solid fa-arrow-down"></i></span></a>
+                    <a href="#"><span><i class="fa-solid fa-circle-play"></i></span> Meet our attorneys </a>
                 </section>
             </div>
         </div>
 
         <!-- ---- Part-3 : Legacy of Winning ---- -->
         <div class="legacy">
-            <div class="wrapper">
+            <div class="wrapper wrap-legacy">
                 <section>
                     <h3>Our work <span><i class="fa-solid fa-arrow-right"></i></span></h3>
                     <h2>A Legacy of Winning</h2>
@@ -155,7 +159,7 @@
 
         <!-- ---- Part-4 : Logo carrousel -->
         <div class="logo-carrousel">
-            <div class="wrapper">
+            <div class="wrapper wrap-logo-carrousel">
                 <img src="./img/ABOTAwhite.png" alt="ABOTAwhite">
                 <img src="./img/bestlawfirm-2025_300x273.png" alt="bestlawfirm-2025_300x273">
                 <img src="./img/HBF-LifeFellow.png" alt="HBF-LifeFellow">
@@ -167,7 +171,7 @@
 
         <!-- ---- Part-5 : News -->
         <div class="news-hicks">
-            <div class="wrapper">
+            <div class="wrapper wrap-news-hicks">
                 <article>
                     <h4><a href="#">Former Justice Department Litigator Aleza Remis Joins Hicks Thomas</a></h4>
                     <time datetime="2025-05-05">May 5, 2025</time>
@@ -189,6 +193,10 @@
             </div>
         </div>
     </main>
+
+    <!-- ============= -->
+        <!-- FOOTER -->
+    <!-- ============= -->
     <footer>
         <div class="wrapper">
             <div class="logo"><img src="./img/hicks-thomas-logo-white.png" alt="hicks-thomas-logo-white"></div>

@@ -1,1 +1,333 @@
 @use "../abstract" as *;
+
+.main-home {
+    // ---- Part-1 : Texas ----
+    .texas {
+        padding-top: 5rem;
+
+        .wrap-texas {
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(255,255,255, 1.0), rgba(255,255,255, 0.55)), url("../img/shutterstock_2413843309.jpg") no-repeat center/cover;
+            padding-bottom: 5rem;
+
+            @media screen and (min-width:576px) and (max-width:960px) {
+                text-align: left;
+            }
+            @media screen and (min-width:960px) {
+                display: flex;
+                align-items: center;
+            }
+            p {
+                padding-bottom: 2rem;
+
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+            blockquote {
+                color: $blue-main;
+                font-size: 2.4rem;
+                
+                @media screen and (min-width:576px) and (max-width:960px) {
+                    text-align: center;
+                }
+                @media screen and (min-width:960px) {
+                    font-size: 3rem;
+                }
+
+                cite {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    display: inline-block;
+                    margin: 3rem 0;
+                }
+            }
+        }
+    }
+
+    // ---- Part-2 : Houston's top ----
+    .houston {
+        background-color: $blue-main;
+
+        @media screen and (min-width:960px) {
+            height: 60vh;
+        }
+
+        .wrap-houston {
+            @media screen and (min-width:960px) {
+                padding: 8rem 0;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            figure {
+                padding-top: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+
+                @media screen and (min-width:960px) {
+                    width: 50%;
+                }
+
+                img {
+                    border-radius: 50%;
+                    border: 1.5rem solid $blue-light;
+                    max-width: 24rem;
+                    max-height: 24rem;
+
+                    @media screen and (min-width:960px) {
+                        max-width: 36rem;
+                        max-height: 36rem;
+                    }
+                }
+                figcaption {
+                    color: $white-main;
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    background: linear-gradient(to right, $blue-linearGradient, $blue-main);
+                    padding: 1rem 2rem;
+                    border-radius: 3rem;
+                    position: absolute;
+                    bottom: 2rem;
+                }
+            }
+            section {
+                color: $white-main;
+                text-align: center;
+                padding: 3rem 0;
+                
+                @media screen and (min-width:576px) {
+                    text-align: left;
+                }
+                @media screen and (min-width:960px) {
+                    width: 50%;
+                }
+
+                h2 {
+                    margin-bottom: 2rem;
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                }
+                a {
+                    display: inline-block;
+                    color: $black-text;
+                    text-decoration: none;
+                    padding: 1rem 3rem;
+                    margin: 2rem 0;
+                    background-color: $white-main;
+                    border-radius: .8rem;
+                    font-family: "Montserrat", sans-serif;
+
+                    span {
+                        margin-right: 1rem;
+                    }
+
+                    &:hover {
+                        background-color: $black-text;
+                        color: $white-main;
+                    }
+                }
+            }
+        }
+    }
+
+    // ---- Part-3 : Legacy of Winning ----
+    .legacy {
+
+        .wrap-legacy {
+            padding: 5rem 0;
+            text-align: center;
+
+            @media screen and (min-width:576px) {
+                text-align: left;
+            }
+
+            > section {
+                background: url("../img/bg-logo-faded-mark-400x400.png") no-repeat left;
+                background-size: 30rem;
+            }
+            .container-grid {
+                margin-top: 3rem;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+
+                @media screen and (min-width:576px) and (max-width:960px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+                @media screen and (min-width:960px) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                .card {
+                    text-align: left;
+                    background-color: $grey-card;
+                    padding: 2rem;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: space-between;
+                    transition: .3s all ease-in-out;
+
+                    // Effet au hover
+                    &:hover {
+                        transform: translateY(-1rem);
+                        
+                        p {
+                            color: $blue-main;
+                        }
+                        a::before {
+                            width: 100%;
+                            height: 4px;
+                            background-color: $blue-main;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 2.4rem;
+                        font-weight: 400;
+                        margin: 1rem 0;
+                    }
+                    p {
+                        padding-bottom: 5rem;
+                    }
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        color: $blue-main;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                        position: relative;
+                        transition: .3s all ease-in-out;
+
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            height: 2px;
+                            width: 3rem;
+                            background-color: $grey-medium;
+                            position: absolute;
+                            bottom: 4rem;
+                            transition: .3s all ease-in-out;
+                        }
+                    }
+                    &--dark {
+                        background-color: $black-bg;
+                        color: $white-main;
+
+                        > a {
+                            color: $white-main;
+                        }
+
+                        &:hover p,&:hover >a {
+                            color: $white-main;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ---- Part-4 : Logo carrousel ----
+    .logo-carrousel {
+        background-color: $blue-main;
+
+        .wrap-logo-carrousel {
+            padding: 3rem 0;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            img {
+                display: none;
+
+                @media screen and (min-width:576px) and (max-width:960px) {
+                    display: inline-block;
+                    max-width: 33%;
+                    height: fit-content;
+                }
+                @media screen and (min-width:960px) {
+                    display: inline-block;
+                    max-width: 16rem;
+                    height: fit-content;
+                }
+
+                &:first-child {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    // ---- Part-5 : News ----
+    .news-hicks {
+        background: url("../img/shutterstock_2314958033.jpg") no-repeat center/cover;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+
+        // Overlay
+        &::before {
+            content: "";
+            display: block;
+            background-color: $blue-main;
+            opacity: .4;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+        }
+        .wrap-news-hicks {
+            padding-top: 4rem;
+            position: relative;
+            z-index: 10000;
+            color: $white-main;
+            text-align: center;
+
+            article {
+                margin: 4rem 0;
+
+                h4>a {
+                    margin-top: 3rem;
+                    text-decoration: none;
+                    font-size: 2rem;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                a {
+                    color: $white-main;
+                }
+                time {
+                    display: inline-block;
+                    margin: 1rem 0;
+                    font-size: 1.2rem;
+                }
+                p {
+                    margin: 2rem 0;
+                }
+                > a {
+                    padding: 1rem 3rem;
+                    background-color: $blue-main;
+                    text-decoration: none;
+
+                    span {
+                        margin-left: 1rem;
+                    }
+                    &:hover {
+                        color: $blue-main;
+                        background-color: $white-main;
+                    }
+                }
+            }
+        }
+    }
+
+}
