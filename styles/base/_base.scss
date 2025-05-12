@@ -1,0 +1,23 @@
+@use "../abstract" as *;
+
+// General fonts
+body {
+    font-family: "Roboto", sans-serif;
+
+    h1 {
+        font-family: "Poppins", sans-serif;
+    }
+    blockquote {
+        font-family: "Libre Baskerville", serif;
+    }
+}
+
+// Container centré avec marges
+.wrapper {
+    width: 90%;
+    margin: auto;
+
+    @media screen and (min-width:960px) {
+        width: 80%;
+    }
+}
