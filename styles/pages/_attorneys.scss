@@ -1,0 +1,64 @@
+@use "../abstract" as *;
+
+.main-attorneys {
+    background: conic-gradient(from 90deg at top 2px left 2px, $grey-bg 90deg, $white-main 0) 0 0 / 3px 3px;
+
+    .container-btn {
+        display: none;
+
+        @media screen and (min-width:960px) {
+            display: block;
+            margin: auto;
+            padding: 5rem 0;
+            width: fit-content;
+
+            button {
+                padding: 1rem;
+                border-radius: .8rem;
+                border: 1px solid $black-text;
+                background-color: $white-main;
+                cursor: pointer;
+
+                &:first-child {
+                    background-color: $blue-main;
+                    color: $white-main;
+                }
+                &:not(:first-child):hover {
+                    background-color: $blue-main;
+                    color: $white-main;
+                }
+            }
+        }
+    }
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 1rem 1rem 5rem;
+
+        @media screen and (min-width:576px) and (max-width:960px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (min-width:960px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        figcaption {
+            color: $grey-text;
+            padding: 2rem 0;
+
+            h4 {
+                color: $blue-main;
+            }
+            .contact {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+                    color: $grey-text;
+                }
+            }
+        }
+    }
+}

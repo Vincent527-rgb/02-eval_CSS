@@ -1,0 +1,110 @@
+@use "../abstract" as *;
+
+.main-contact {
+
+    .wrap-form {
+        background: url("../img/bg.svg");
+
+        form {
+            margin: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media screen and (min-width:576px) {
+                // Mettre les corners
+                background: conic-gradient(from 90deg at top 2px left 2px, $white-main 90deg, $blue-main 0) 0 0 / 60px 60px no-repeat, conic-gradient(from -90deg at bottom 2px right 2px, $white-main 90deg, $blue-main 0) 100% 100% / 60px 60px no-repeat;
+                padding: 3rem;
+            }
+
+            h4 {
+                font-size: 2.4rem;
+
+            }
+            h5 {
+                font-size: 2.2rem;
+                color: $grey-text;
+                width: 100%;
+                text-align: center;
+            }
+            input {
+                width: 100%;
+                margin: 1rem 0;
+                padding: .5rem;
+            }
+            [placeholder="First name"], [placeholder="Last name"] {
+                width: 48%;
+            }
+            @media screen and (min-width:576px) {
+                [placeholder="Email"], [placeholder="Phone"] {
+                    width: 48%;
+                }
+            }
+
+            select, textarea {
+                width: 100%;
+                background-color: $white-main;
+                margin: 1rem 0;
+                padding: .5rem;
+            }
+            small {
+                font-style: italic;
+                margin: 1rem 0 3rem;
+            }
+            button {
+                padding: 1rem;
+                margin: 0 auto;
+                background-color: $blue-main;
+                border: 0;
+                border-radius: 1rem;
+                color: $white-main;
+                transition: .3s all ease-in-out;
+
+                &:hover {
+                    background-color: $black-text;
+                    box-shadow: 0 0 5px $black-text;
+                }
+            }
+        }
+    }
+    .wrap-map {
+        background-color: $grey-bg;
+        padding: 3rem 0;
+
+        section {
+            width: 90%;
+            margin: 2.5rem auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $white-main;
+            text-align: center;
+
+            @media screen and (min-width:576px) and (max-width:960px) {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            h2 {
+                margin-top: 1.5rem;
+            }
+            .adresses {
+                padding-bottom: 3rem;
+
+                i {
+                    color: $blue-main;
+                }
+                a {
+                    text-decoration: none;
+                }
+            }
+            iframe {
+                height: 17rem;
+                width: 100%;
+                margin: 0 2rem;
+            }
+        }
+    }
+
+}

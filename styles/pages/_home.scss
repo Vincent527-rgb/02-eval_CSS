@@ -190,9 +190,11 @@
                         font-size: 2.4rem;
                         font-weight: 400;
                         margin: 1rem 0;
+                        // flex-grow: 1;
                     }
                     p {
                         padding-bottom: 5rem;
+                        flex-grow: 1;
                     }
                     a {
                         display: inline-block;
@@ -284,14 +286,33 @@
             z-index: 2;
         }
         .wrap-news-hicks {
-            padding-top: 4rem;
+            padding: 4rem 0;
             position: relative;
             z-index: 10000;
             color: $white-main;
             text-align: center;
 
+            @media screen and (min-width:576px) and (max-width:960px) {
+                text-align: left;
+            }
+            @media screen and (min-width:960px) {
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+            }
+
             article {
                 margin: 4rem 0;
+                display: flex;
+                flex-direction: column;
+
+                @media screen and (min-width:960px) {
+                    width: 30%;
+
+                    p {
+                        flex-grow: 1;
+                    }
+                }
 
                 h4>a {
                     margin-top: 3rem;
@@ -314,9 +335,12 @@
                     margin: 2rem 0;
                 }
                 > a {
+                    width: fit-content;
                     padding: 1rem 3rem;
                     background-color: $blue-main;
                     text-decoration: none;
+                    text-transform: uppercase;
+                    align-self: center;
 
                     span {
                         margin-left: 1rem;

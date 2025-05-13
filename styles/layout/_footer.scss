@@ -1,1 +1,139 @@
 @use "../abstract" as *;
+
+footer {
+    background-color: $black-bg;
+    color: $white-main;
+    position: relative;
+
+    .wrap-footer {
+        padding: 8rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            max-width: 34rem;
+        }
+        .container-localisation {
+
+            @media screen and (min-width:576px) and (max-width:960px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                section {
+                    width: 50%;
+                }
+            }
+            @media screen and (min-width:960px) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                section {
+                    width: 15%;
+                }
+                h2 {
+                    font-size: 2.4rem;
+                }
+            }
+
+            section {
+                text-align: center;
+                padding: 4rem 0;
+
+                address {
+                    font-style: normal;
+                    margin-bottom: 2rem;
+                }
+                > a {
+                    text-decoration: none;
+                    color: $white-main;
+                    display: block;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .social-networks {
+
+            a {
+                display: inline-block;
+                color: $white-main;
+                width: 3rem;
+                height: 3rem;
+
+                &:hover {
+                    color: $blue-main;
+                }
+            }
+        }
+        .disclaimers {
+            padding: 3rem 0;
+            text-align: center;
+
+            @media screen and (min-width:576px) {
+                text-align: left;
+            }
+        }
+        .copyrights {
+            text-align: center;
+
+            @media screen and (min-width:576px) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            small {
+                display: block;
+
+                a {
+                    color: $white-main;
+                    text-decoration: none;
+    
+                }
+            }
+        }
+    }
+    // Eléments fixes sur toutes les pages
+    .fixed-icon {
+        position: fixed;
+        background-color: $blue-main;
+        border-radius: 50%;
+        bottom: 3rem;
+        left: 1rem;
+        width: 4.5rem;
+        z-index: 10;
+
+        &:hover {
+            scale: 1.2;
+        }
+    }
+    .contact-banner {
+        position: fixed;
+        background-color: $blue-main;
+        border-top: 2px solid $white-main;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width:576px) {
+            display: none;
+        }
+
+        a {
+            color: $white-main;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-left: 2rem;
+            font-weight: 900;
+        }
+    }
+
+}
