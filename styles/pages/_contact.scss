@@ -19,6 +19,8 @@
 
             h4 {
                 font-size: 2.4rem;
+                width: 100%;
+                text-align: center;
 
             }
             h5 {
@@ -68,41 +70,88 @@
         }
     }
     .wrap-map {
-        background-color: $grey-bg;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23444444' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
         padding: 3rem 0;
 
+        @media screen and (min-width:960px) {
+            padding: 3rem 6rem;
+        }
+
+        .map {
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (min-width:960px) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+        }
         section {
             width: 90%;
             margin: 2.5rem auto;
-
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: $white-main;
             text-align: center;
+            overflow: hidden;
 
             @media screen and (min-width:576px) and (max-width:960px) {
                 align-items: flex-start;
+                text-align: left;
+                padding-left: 2rem;
+            }
+            @media screen and (min-width:960px) {
+                width: 30%;
                 text-align: left;
             }
 
             h2 {
                 margin-top: 1.5rem;
+                flex-grow: 1;
+                font-size: 2.6rem;
+
+                @media screen and (min-width:960px) {
+                    font-size: 2.8rem;
+                }
             }
             .adresses {
                 padding-bottom: 3rem;
+                width: 80%;
 
-                i {
-                    color: $blue-main;
+                @media screen and (min-width:960px) {
+                    display: flex;
+                    justify-content: space-between;
                 }
-                a {
-                    text-decoration: none;
+
+                address {
+                    font-style: normal;
+                }
+                .to-contact {
+
+                    @media screen and (min-width:960px) {
+                        border-left: 1px solid $blue-main;
+                        padding-left: .5rem;
+                    }
+
+                    i {
+                        color: $blue-main;
+                    }
+                    a {
+                        text-decoration: none;
+                    }
                 }
             }
             iframe {
                 height: 17rem;
                 width: 100%;
                 margin: 0 2rem;
+
+                @media screen and (min-width:576px) and (max-width:960px) {
+                    margin: 0;
+                }
             }
         }
     }

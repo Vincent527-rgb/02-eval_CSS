@@ -181,8 +181,29 @@ header {
 // HEADER - Attorneys
 // ======================================
 .header-attorneys {
+    // Bordure shadow sous le header
+    box-shadow: inset 0px -5px 5px rgba(0,0,0,.3);
+
     // Pas de hover sur le lien de la page en cours
     .menu>.menu-desktop>a:hover:nth-of-type(2) {
         color: $black-text;
+    }
+}
+
+// ======================================
+// HEADER - Contact
+// ======================================
+.header-contact {
+    // Bordure shadow sous le header
+    box-shadow: inset 0px -5px 5px rgba(0,0,0,.3);
+
+    // Pas de hover sur le lien de la page en cours
+    .menu>.menu-desktop>a:hover:nth-of-type(6) {
+        color: $black-text;
+    }
+
+    // Changer la couleur du burger menu
+    .menu .menu-mobile > div {
+        background-color: $black-text;
     }
 }
